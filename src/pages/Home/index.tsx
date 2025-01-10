@@ -11,14 +11,14 @@ const Home: FC = () => {
           <hr />
           <h1>WE ARE</h1>
           <hr />
-          <img src="/Headkino_logo.png" alt="Headkino Logo" className="logo-image" />
+          <img src="/assets/Headkino_logo.png" alt="Headkino Logo" className="logo-image" />
           <p>
             2 friends making game about ordinary people in a slightly extraordinary
             situation.
           </p>
           <div className="social-icons">
             <a href="https://itch.io" target="_blank" rel="noopener noreferrer">
-              <img src="/itchio-black.svg" alt="Itch.io" className="social-icon itch" />
+              <img src="/assets/itchio-black.svg" alt="Itch.io" className="social-icon itch" />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram social-icon"></i>
@@ -55,9 +55,9 @@ const Home: FC = () => {
             </a>
           </div>
         </div>
-        <img src="/game_scene.png" alt="Game Scene" className="half-page-image" />
+        <img src="/assets/game_scene.png" alt="Game Scene" className="half-page-image" />
         <div className='ghost-container'>
-          <img src="/ghost_01.png" alt="Ghost" className="floating-ghost" />
+          <img src="/assets/ghost_01.png" alt="Ghost" className="floating-ghost" />
         </div>
       </header>
     </div>

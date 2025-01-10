@@ -1,11 +1,14 @@
 {
-  "name": "react-spa-boilerplate",
-  "version": "0.0.0",
+  "name": "headkino-website",
+  "homepage": "https://dephiloper.github.io/headkino",
+  "private": true,
+  "version": "1.0.0",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
     "tsc": "tsc",
     "serve": "vite preview",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
     "prettier": "prettier  --log-level warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" "
   },
@@ -29,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.36.1",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.3.3",
     "typescript": "5.5.4",
     "vite": "^5.4.5"
