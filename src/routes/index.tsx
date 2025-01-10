@@ -1,11 +1,13 @@
 import React, { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Protected from '../components/Protected'
+// import Protected from '../components/Protected'
 
 // import route pages here
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
-import { RequireAuth } from './RequireAuth'
+import Protected from '../components/Protected';
+import { RequireAuth } from './RequireAuth';
+// import { RequireAuth } from './RequireAuth'
 
 const RouteStack: FC = () => {
   return (
