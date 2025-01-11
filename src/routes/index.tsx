@@ -5,15 +5,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import route pages here
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
-import Protected from '../components/Protected';
-import { RequireAuth } from './RequireAuth';
+// import Protected from '../components/Protected';
+// import { RequireAuth } from './RequireAuth';
 // import { RequireAuth } from './RequireAuth'
 
 const RouteStack: FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/headkino-website" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
         {/* example of route that requires authentication */}
         {/* <Route
@@ -26,7 +26,7 @@ const RouteStack: FC = () => {
         /> */}
 
         {/* not found routes will hit here */}
-        <Route path="/headkino-website/*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
