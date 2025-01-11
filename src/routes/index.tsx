@@ -13,7 +13,7 @@ const RouteStack: FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/headkino-website" element={<Home />} />
 
         {/* example of route that requires authentication */}
         {/* <Route
@@ -26,7 +26,7 @@ const RouteStack: FC = () => {
         /> */}
 
         {/* not found routes will hit here */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="/headkino-website/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
