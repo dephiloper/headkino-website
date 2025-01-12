@@ -70,6 +70,7 @@
   margin-top: auto; /* Push to the bottom */
   margin-bottom: 30px; /* Add bottom margin */
   gap: 25px; /* Add horizontal spacing between social buttons */
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .right-side .social-icons a {
@@ -85,10 +86,7 @@
   display: flex;
   align-items: center; /* Center icon content vertically */
   justify-content: center; /* Center icon content horizontally */
-  transition:
-    transform 0.3s,
-    color 0.3s,
-    fill 0.3s; /* Add smooth animation */
+  transition: transform 0.3s, color 0.3s, fill 0.3s; /* Add smooth animation */
   cursor: pointer; /* Add pointer cursor */
 }
 

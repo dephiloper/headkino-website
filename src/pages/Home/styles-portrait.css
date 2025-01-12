@@ -1,0 +1,83 @@
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center elements vertically */
+    background-color: #ffeb10;
+  }
+
+  .right-side {
+    width: 100%;
+    height: auto; /* Adjust height */
+    padding: 20px; /* Add padding */
+    position: relative; /* Change position to relative */
+    color: #ffeb10; /* Use App-header background color for text */
+    z-index: 1; /* Ensure it stays above the background image */
+  }
+
+  .right-side h3,
+  .right-side h1,
+  .right-side p,
+  .right-side .social-icon {
+    color: #ffeb10; /* Use App-header background color for text */
+    margin-top: 60px;
+  }
+
+  .right-side hr {
+    display: none; /* Remove the divider */
+  }
+
+  .right-side .logo-image {
+    content: url('Headkino_logo_portrait.png'); /* Use portrait version of the logo */
+  }
+
+  .right-side .social-icon.itch {
+    content: url('itchio-portrait.svg'); /* Use portrait version of the logo */
+  }
+
+  .half-page-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw; /* Cover the entire width */
+    z-index: 0; /* Ensure it stays behind the content */
+    filter: blur(5px) brightness(0.7); /* Make the image a bit blurry and darker */
+  }
+
+  .floating-ghost {
+    width: 150px; /* Make the ghost half the size */
+  }
+}
+
+@media (max-width: 480px) {
+  .right-side .social-icon {
+    width: 20px;
+    height: 20px; /* Scale down social icons further */
+    font-size: 0.8em;
+  }
+}
+
+.right-side .social-icon.itch {
+  height: 30px; /* Ensure the itch.io icon has the same height */
+  width: auto; /* Maintain aspect ratio */
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .right-side .social-icon.itch {
+    height: 20px; /* Scale down itch.io icon */
+  }
+}
+
+@media (max-width: 480px) {
+  .right-side .social-icon.itch {
+    height: 10px; /* Scale down itch.io icon further */
+  }
+}
+
+.right-side .social-icon.itch:hover {
+  filter: invert(41%) sepia(42%) saturate(4382%) hue-rotate(335deg) brightness(131%)
+    contrast(96%);
+}

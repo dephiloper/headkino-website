@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react'
 import './styles.css'
+import './styles-portrait.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const Home: FC = () => {
@@ -17,7 +18,7 @@ const Home: FC = () => {
             situation.
           </p>
           <div className="social-icons">
-            <a href="https://itch.io" target="_blank" rel="noopener noreferrer">
+            <a href="https://headkino.itch.io/" target="_blank" rel="noopener noreferrer">
               <img src="itchio-black.svg" alt="Itch.io" className="social-icon itch" />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
