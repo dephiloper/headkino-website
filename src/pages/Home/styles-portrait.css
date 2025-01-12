@@ -47,10 +47,14 @@
 
   .right-side .logo-image {
     content: url('/Headkino_logo_portrait.png'); /* Use portrait version of the logo */
+    display: flex;
+    align-items: flex-start; /* new */
   }
 
   .right-side .social-icon.itch {
     content: url('/itchio-portrait.svg'); /* Use portrait version of the logo */
+    display: flex;
+    align-items: flex-start; /* new */
   }
 
   .half-page-image {
