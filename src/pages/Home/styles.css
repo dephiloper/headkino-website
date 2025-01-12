@@ -174,3 +174,17 @@
     transform: translateX(130vw) rotate(90deg); /* Move further off-screen to the right and complete rotation */
   }
 }
+
+@media (min-width: 830px) {
+  .right-side {
+    font-size: calc(8px + 2vmin); /* Adjust font size to prevent overflow */
+  }
+
+  .right-side .logo-image {
+    width: 35%; /* Adjust logo size to prevent overflow */
+  }
+
+  .right-side p {
+    font-size: 0.6em; /* Adjust paragraph text size to prevent overflow */
+  }
+}
