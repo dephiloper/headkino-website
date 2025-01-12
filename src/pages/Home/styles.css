@@ -67,9 +67,10 @@
   display: flex;
   justify-content: center;
   align-items: center; /* Center vertically */
-  margin-top: auto; /* Push to the bottom */
+  margin-top: 70px; /* Push to the bottom */
   margin-bottom: 30px; /* Add bottom margin */
-  gap: 25px; /* Add horizontal spacing between social buttons */
+  column-gap: 25px; /* Add horizontal spacing between social buttons */
+  row-gap: 5px; /* Add horizontal spacing between social buttons */
   flex-wrap: wrap; /* Allow wrapping */
 }
 
@@ -186,5 +187,19 @@
 
   .right-side p {
     font-size: 0.6em; /* Adjust paragraph text size to prevent overflow */
+  }
+}
+
+@media (max-width: 768px) {
+  .right-side .social-icons {
+    gap: 10px; /* Reduce gap between social icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .right-side .social-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create two rows with 4 icons each */
+    gap: 10px; /* Small gap between rows */
   }
 }
