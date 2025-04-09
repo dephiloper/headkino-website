@@ -1,116 +1,114 @@
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.App {
+  position: relative;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/game_scene.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.segment {
+  width: 100%;
+}
+
+.game-segment {
+  min-height: 1200px;
+  background-color: #00cbff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 0;
+}
+
+.headkino-segment {
+  height: 1200px;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 1;
+}
+
+.about-us-segment {
+  height: 1200px;
+  background-color: #5f4aff;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
 
-  .App {
-    position: relative;
+  to {
+    transform: rotate(360deg);
   }
+}
 
-  .background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url('/game_scene.png');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-  }
+.ghost-image {
+  height: 520px;
+  animation: rotate 60s linear infinite;
+}
 
-  .segment {
-    width: 100%;
-  }
+.character-image {
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: -40px;
+  z-index: 2;
+}
 
-  .game-segment {
-    min-height: 1200px;
-    background-color: #00CBFF;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 0;
-  }
+.game-title {
+  width: 500px;
+  margin: 20px 0;
+}
 
-  .headkino-segment {
-    height: 1200px;
-    background-color: transparent;
-    backdrop-filter: blur(4px);
-    position: relative;
-    z-index: 1;
-  }
+.game-description {
+  font-size: 24px;
+  font-family: serif;
+  margin: 20px 0;
+  max-width: 450px;
+  display: inline-block;
+}
 
-  .about-us-segment {
-    height: 1200px;
-    background-color: #5F4AFF;
-  }
+.game-description span {
+  font-size: 28px;
+  font-weight: bold;
+}
 
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.marquee {
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
 
-
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .ghost-image {
-    height: 520px;
-    animation: rotate 60s linear infinite;
-  }
-
-  .character-image {
-    height: 400px;
-    margin-top: 20px;
-    margin-bottom: -40px;
-    z-index: 2;
-  }
-
-  .game-title {
-    width: 500px;
-    margin: 20px 0;
-  }
-
-  .game-description {
-    font-size: 24px;
-    font-family: serif;
-    margin: 20px 0;
-    max-width: 450px;
-    display: inline-block;
-  }
-
-  .game-description span {
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-
-  .marquee {
-    color: black;
-    font-weight: bold;
-    margin-top: 20px;
-    text-transform: uppercase;
-    font-size: 24px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .marquee span {
-    background-color: yellow;
-  }
+.marquee span {
+  background-color: yellow;
+}

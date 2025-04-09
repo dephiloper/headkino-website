@@ -87,7 +87,10 @@
   display: flex;
   align-items: center; /* Center icon content vertically */
   justify-content: center; /* Center icon content horizontally */
-  transition: transform 0.3s, color 0.3s, fill 0.3s; /* Add smooth animation */
+  transition:
+    transform 0.3s,
+    color 0.3s,
+    fill 0.3s; /* Add smooth animation */
   cursor: pointer; /* Add pointer cursor */
 }
 
@@ -156,7 +159,9 @@
   height: auto;
   z-index: 2; /* Ensure the ghost is above all text and images */
   opacity: 0.8; /* Make the ghost more transparent */
-  animation: float 30s infinite linear, blur-out 30s infinite linear; /* Increase duration for slower movement and add blur-out animation */
+  animation:
+    float 30s infinite linear,
+    blur-out 30s infinite linear; /* Increase duration for slower movement and add blur-out animation */
   transition: filter 0.5s; /* Add smooth transition for blur effect */
 }
 

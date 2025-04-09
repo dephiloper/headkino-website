@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import './styles.css'
 import './styles-portrait.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
@@ -21,7 +21,11 @@ const Home: FC = () => {
             <a href="https://headkino.itch.io/" target="_blank" rel="noopener noreferrer">
               <img src="itchio-black.svg" alt="Itch.io" className="social-icon itch" />
             </a>
-            <a href="https://instagram.com/headkino.games" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://instagram.com/headkino.games"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-instagram social-icon"></i>
             </a>
             {/* <a href="https://threads.net/@headkino.games" target="_blank" rel="noopener noreferrer">
@@ -41,7 +45,11 @@ const Home: FC = () => {
             >
               <i className="fab fa-youtube social-icon"></i>
             </a>
-            <a href="https://tiktok.com/@headkino.games" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://tiktok.com/@headkino.games"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-tiktok social-icon"></i>
             </a>
             {/* <a href="https://www.linkedin.com/company/headkino" target="_blank" rel="noopener noreferrer">
@@ -54,16 +62,24 @@ const Home: FC = () => {
             >
               <i className="fas fa-envelope social-icon"></i>
             </a>
-            <a href="https://reddit.com/r/headkino" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://reddit.com/r/headkino"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-reddit social-icon"></i>
             </a>
-            <a href="https://discord.gg/headkino" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://discord.gg/headkino"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-discord social-icon"></i>
             </a>
           </div>
         </div>
         <img src="game_scene.png" alt="Game Scene" className="half-page-image" />
-        <div className='ghost-container'>
+        <div className="ghost-container">
           <img src="ghost_01.png" alt="Ghost" className="floating-ghost" />
         </div>
       </header>
