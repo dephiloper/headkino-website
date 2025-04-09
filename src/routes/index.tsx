@@ -1,29 +1,18 @@
 import React, { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Protected from '../components/Protected'
 
-// import route pages here
-import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
-// import Protected from '../components/Protected';
-// import { RequireAuth } from './RequireAuth';
-// import { RequireAuth } from './RequireAuth'
+import HomeNew from '../pages/Home/index_new'
+import Home from '../pages/Home'
+
 
 const RouteStack: FC = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/new" element={<HomeNew />} />
 
-        {/* example of route that requires authentication */}
-        {/* <Route
-          path="/protected"
-          element={
-            <RequireAuth>
-              <Protected />
-            </RequireAuth>
-          }
-        /> */}
 
         {/* not found routes will hit here */}
         <Route path="*" element={<NotFound />} />
