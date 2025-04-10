@@ -12,14 +12,14 @@ const Home: FC = () => {
           <hr />
           <h1>WE ARE</h1>
           <hr />
-          <img src="Headkino_logo.png" alt="Headkino Logo" className="logo-image" />
+          <img src="Headkino_logo.webp" alt="Headkino Logo" className="logo-image" />
           <p>
             Friends making game about ordinary people in a slightly extraordinary
             situation.
           </p>
           <div className="social-icons">
             <a href="https://headkino.itch.io/" target="_blank" rel="noopener noreferrer">
-              <img src="itchio-black.svg" alt="Itch.io" className="social-icon itch" />
+              <img src="itchio-black.webp" alt="Itch.io" className="social-icon itch" />
             </a>
             <a
               href="https://instagram.com/headkino.games"
@@ -78,9 +78,9 @@ const Home: FC = () => {
             </a>
           </div>
         </div>
-        <img src="game_scene.png" alt="Game Scene" className="half-page-image" />
+        <img src="game_scene.webp" alt="Game Scene" className="half-page-image" />
         <div className="ghost-container">
-          <img src="ghost_01.png" alt="Ghost" className="floating-ghost" />
+          <img src="ghost_01.webp" alt="Ghost" className="floating-ghost" />
         </div>
       </header>
     </div>

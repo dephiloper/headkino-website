@@ -93,7 +93,7 @@ const HomeNew: FC = () => {
                             <div className='remove-on-mobile'>HEADKINO GAMES</div>
                             <img
                                 className='visible-on-mobile headkino-nav'
-                                src="/Headkino_logo.png"
+                                src="/Headkino_logo.webp"
                                 alt="HeadKino Logo"
 
                             />
@@ -113,10 +113,10 @@ const HomeNew: FC = () => {
 
             <div className="segment game-segment">
                 <div className="content">
-                    <img src="/ghost_01.png" alt="Rotating Ghost" className="ghost-image" />
+                    <img src="/ghost_01.webp" alt="Rotating Ghost" className="ghost-image" />
                     <img
                         id="games"
-                        src="/HauntedCleaner_title_blk.png"
+                        src="/HauntedCleaner_title_blk.webp"
                         alt="Game Title"
                         className="game-title"
                     />
@@ -140,24 +140,24 @@ const HomeNew: FC = () => {
                     </Marquee>
                     <div className='preview'>
                         <img
-                            src="/webbg_01.jpg"
-                            alt="Character Portrait"
+                            src="/game_scene.webp"
+                            alt="screenshot game"
                             className="preview-image"
                         />
                         <img
-                            src="/webbg_02.jpg"
-                            alt="Character Portrait"
+                            src="/webbg_02.webp"
+                            alt="screenshot game"
                             className="preview-image"
                         />
                         <img
-                            src="/image22.jpg"
-                            alt="Character Portrait"
+                            src="/image22.webp"
+                            alt="screenshot game"
                             className="preview-image"
                         />
                     </div>
 
                     <img
-                        src="/image59_b.png"
+                        src="/image59_b.webp"
                         alt="Character Portrait"
                         className="character-image"
                     />
@@ -168,14 +168,14 @@ const HomeNew: FC = () => {
                 <div className='content'>
                     <h3>WELCOME TO OUR SITE!</h3>
                     <h1>WE ARE</h1>
-                    <img src="/Headkino_logo_positive.png" alt="Headkino Logo" className="logo-image" />
+                    <img src="/Headkino_logo_positive.webp" alt="Headkino Logo" className="logo-image" />
                     <p>
                         Friends making game about ordinary people in a slightly extraordinary
                         situation.
                     </p>
                     <div className="social-icons">
                         <a href="https://headkino.itch.io/" target="_blank" rel="noopener noreferrer">
-                            <img src="/itchio-black-no-text.svg" alt="Itch.io" className="social-icon itch" />
+                            <img src="/itchio-black-no-text.webp" alt="Itch.io" className="social-icon itch" />
                         </a>
                         <a
                             href="https://instagram.com/headkino.games"
@@ -245,12 +245,12 @@ const HomeNew: FC = () => {
 
                     <div className="image-container">
                         <div className="image-wrapper">
-                            <img src="/profile_01_c.png" alt="Team Member Joy" />
+                            <img src="/profile_01_c.webp" alt="Team Member Joy" />
                             <p className="name">Joy W</p>
                             <p>Cofounder - Art and Narrative</p>
                         </div>
                         <div className="image-wrapper">
-                            <img src="/portrait_philipp.png" alt="Team Member Philipp" />
+                            <img src="/portrait_philipp.webp" alt="Team Member Philipp" />
                             <p className="name">Philipp B</p>
                             <p>Cofounder - Programming and Design</p>
                         </div>
