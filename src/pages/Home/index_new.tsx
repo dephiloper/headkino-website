@@ -1,15 +1,84 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import './styles-new.css'
 import Marquee from 'react-fast-marquee'
+import { Link } from 'react-router-dom';
 
 const HomeNew: FC = () => {
+    const [navOpen, setNavOpen] = useState(false);
+    const [dropdownVisible, setDropdownVisible] = useState(false);
+
+    const handleClickOutside = (event: MouseEvent) => {
+        const target = event.target as HTMLElement; // Cast to HTMLElement for better type safety
+        const navContent = document.querySelector('.nav-content'); // Select the nav-content element
+
+        // Check if the clicked target is not the navContent or a descendant of it
+        if (navContent && !navContent.contains(target)) {
+            setNavOpen(false); // Close the nav if clicked outside
+        }
+    };
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    useEffect(() => {
+        if (navOpen) {
+            setDropdownVisible(true);
+        } else {
+            const timeout = setTimeout(() => {
+                setDropdownVisible(false);
+            }, 300);
+            return () => clearTimeout(timeout);
+        }
+    }, [navOpen]);
+
+
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+        setNavOpen(false);
+    };
+
+
     return (
         <div className="App">
+            <div className="visible-on-mobile company-name navbar-left">HEADKINO GAMES</div>
+            <nav className="navbar">
+                <div className="navbar-left hidden-on-mobile">HEADKINO GAMES</div>
+                <div className="navbar-right" onClick={() => setNavOpen(!navOpen)}>
+                    <i className="fas fa-bars"></i>
+                </div>
+                <div className={`nav-dropdown ${dropdownVisible ? (navOpen ? '' : 'hidden') : 'hidden'}`}>
+                    <div className="nav-content">
+                        <span className="nav-links">
+                            <div className='remove-on-mobile'>HEADKINO GAMES</div>
+                            <img
+                                className='visible-on-mobile headkino-nav'
+                                src="/Headkino_logo.png"
+                                alt="HeadKino Logo"
+
+                            />
+                            <span className="spacer"></span>
+                            <Link to="#games" onClick={() => scrollToSection('games')}>GAMES</Link>
+                            <div> | </div>
+                            <Link to="#about" onClick={() => scrollToSection('about')}>ABOUT</Link>
+                            <div> | </div>
+                            <Link to="#team" onClick={() => scrollToSection('team')}>TEAM</Link>
+                            <div> | </div>
+                            <a onClick={() => { }}>CONTACT</a>
+                        </span>
+                    </div>
+                </div>
+            </nav>
             <div className="background-image"></div>
+
             <div className="segment game-segment">
                 <div className="content">
                     <img src="/ghost_01.png" alt="Rotating Ghost" className="ghost-image" />
                     <img
+                        id="games"
                         src="/HauntedCleaner_title_blk.png"
                         alt="Game Title"
                         className="game-title"
@@ -57,18 +126,19 @@ const HomeNew: FC = () => {
                     />
                 </div>
             </div>
-            <div className="segment company-segment">
+
+            <div id="about" className="segment company-segment">
                 <div className='content'>
                     <h3>WELCOME TO OUR SITE!</h3>
                     <h1>WE ARE</h1>
-                    <img src="Headkino_logo.png" alt="Headkino Logo" className="logo-image" />
+                    <img src="/Headkino_logo_positive.png" alt="Headkino Logo" className="logo-image" />
                     <p>
                         Friends making game about ordinary people in a slightly extraordinary
                         situation.
                     </p>
                     <div className="social-icons">
                         <a href="https://headkino.itch.io/" target="_blank" rel="noopener noreferrer">
-                            <img src="itchio-black-no-text.svg" alt="Itch.io" className="social-icon itch" />
+                            <img src="/itchio-black-no-text.svg" alt="Itch.io" className="social-icon itch" />
                         </a>
                         <a
                             href="https://instagram.com/headkino.games"
@@ -129,7 +199,7 @@ const HomeNew: FC = () => {
                 </div>
             </div>
 
-            <div className="segment about-us-segment">
+            <div id="team" className="segment about-us-segment">
                 <div className='content'>
                     <Marquee className="marquee-heading" direction='left'>
                         <span>Who Are We?</span>

@@ -9,6 +9,96 @@ html {
   position: relative;
 }
 
+.company-name {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  padding: 25px 20px;
+  left: 10px;
+}
+
+.headkino-nav {
+  display: none;
+  width: 30px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 4;
+}
+
+.navbar-left {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  flex: 1;
+}
+
+.navbar-right {
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-dropdown {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  background-color: yellow;
+  padding: 15px;
+  z-index: 5;
+  border-radius: 20px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.nav-dropdown.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.nav-links {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+  display: contents;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
 .background-image {
   position: fixed;
   top: 0;
@@ -346,7 +436,42 @@ h1 {
 
 
 @media (max-width: 768px) {
+  .nav-links {
+    font-size: 0.9em;
+  }
+
+  .headkino-nav {
+    visibility: visible;
+    display: flex;
+  }
+
+
+  .hidden-on-mobile {
+    visibility: hidden;
+  }
+
+  .remove-on-mobile {
+    display: none;
+  }
+
+  .visible-on-mobile {
+    visibility: visible;
+  }
+
+  .navbar-right {
+    font-size: 2em;
+  }
+
+  .nav-dropdown {
+    padding: 10px;
+  }
+
+
   /* game segment */
+  .ghost-image {
+    margin-top: 100px;
+  }
+
 
   .game-description {
     font-size: 18px;
