@@ -27,6 +27,7 @@ html {
 
 .content {
   margin: 0 auto;
+  padding: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -36,7 +37,7 @@ html {
 /* game segment */
 
 .game-segment {
-  min-height: 1200px;
+  min-height: 1000px;
   background-color: #00cbff;
   display: flex;
   justify-content: flex-start;
@@ -57,20 +58,25 @@ html {
 }
 
 .ghost-image {
-  height: 520px;
+  width: 50%;
+  max-width: 400px;
   animation: rotate 60s linear infinite;
   margin: 20px;
 }
 
 .character-image {
-  height: 400px;
+  width: 60vw;
+  height: auto;
+  max-width: 300px;
   margin-top: 20px;
-  margin-bottom: -40px;
+  margin-bottom: -4.5vh;
   z-index: 2;
+  object-fit: contain;
 }
 
 .game-title {
-  width: 800px;
+  width: 90vw;
+  max-width: 700px;
   margin: 20px 0;
 }
 
@@ -79,6 +85,7 @@ html {
   font-family: serif;
   margin: 20px 0;
   max-width: 600px;
+  width: 90vw;
   display: inline-block;
 }
 
@@ -145,7 +152,8 @@ h1 {
 }
 
 .logo-image {
-  width: 350px;
+  width: 70vw;
+  max-width: 350px;
   margin: 20px 0;
 }
 
@@ -153,7 +161,8 @@ h1 {
   font-size: 1.2em;
   margin: 20px 0 0;
   color: black;
-  max-width: 30%;
+  width: 450px;
+  max-width: 80vw;
   font-family: 'Georgia', serif;
   font-weight: 500;
 }
@@ -164,6 +173,7 @@ h1 {
   align-items: center;
   margin: 70px 0 30px;
   column-gap: 40px;
+  row-gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -266,7 +276,8 @@ h1 {
 }
 
 .image-wrapper {
-  max-width: 450px;
+  width: 40vw;
+  max-width: 400px;
   margin: 0 20px;
   text-align: center;
   display: flex;
@@ -294,11 +305,10 @@ h1 {
 }
 
 .ghost-heading {
-  font-size: 4em;
+  font-size: 5em;
   color: black;
   text-align: center;
-  margin: 40px 0 40px 0;
-
+  margin: 60px 0 60px 0;
 }
 
 .text-heading {
@@ -331,4 +341,110 @@ h1 {
 .small {
   margin: 10px 0 10px 0;
   font-size: 2em;
+}
+
+
+
+@media (max-width: 768px) {
+  /* game segment */
+
+  .game-description {
+    font-size: 18px;
+  }
+
+  .game-description span {
+    font-size: 20px;
+  }
+
+  .character-image {
+    height: 30vh;
+    margin-bottom: -4.2vh;
+  }
+
+  .marquee-banner {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .preview-image {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin: 10px 0;
+  }
+
+
+
+
+  /* company segment */
+
+  .company-segment p {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .social-icon {
+    font-size: 2.5em;
+  }
+
+  .social-icon.itch {
+    height: 40px;
+    width: auto;
+  }
+
+  /* about-us segment */
+
+  .marquee-heading {
+    font-size: 3em;
+  }
+
+  .heading-team {
+    font-size: 2.2em;
+    margin-top: 60px;
+  }
+
+  .image-wrapper {
+    margin: 0 5px;
+  }
+
+
+  .image-wrapper p {
+    font-size: 1em;
+  }
+
+  .image-wrapper p.name {
+    font-size: 1.2em;
+  }
+
+  .ghost-heading {
+    font-size: 3em;
+    margin: 40px 0 40px 0;
+  }
+
+  .text-heading {
+    font-size: 3em;
+  }
+
+  .text-subheading {
+    font-size: 1.5em;
+  }
+
+  .text-description {
+    font-size: 1.1em;
+  }
 }

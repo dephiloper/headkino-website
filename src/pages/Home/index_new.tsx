@@ -68,7 +68,7 @@ const HomeNew: FC = () => {
                     </p>
                     <div className="social-icons">
                         <a href="https://headkino.itch.io/" target="_blank" rel="noopener noreferrer">
-                            <img src="itchio-black.svg" alt="Itch.io" className="social-icon itch" />
+                            <img src="itchio-black-no-text.svg" alt="Itch.io" className="social-icon itch" />
                         </a>
                         <a
                             href="https://instagram.com/headkino.games"
@@ -160,7 +160,7 @@ const HomeNew: FC = () => {
                         <br /><br />
                         Our first project <span>Haunted Cleaner</span> was born of a combination of cozy games and personal stories in mysterious, nostalgic settings. The project reflects a shared interest in unusual, cross-genre media and aims to create engaging experiences, emotional connection and relaxation through satisfying interactions and both direct and indirect storytelling.
                         <br /><br />
-                        Feel free to connect:
+                        <span>Feel free to connect.</span>
                         <br />
                         <a
                             href="mailto:headkinogames@gmail.com"
