@@ -2,6 +2,8 @@ import React, { FC, useEffect, useState } from 'react'
 import './styles-new.css'
 import Marquee from 'react-fast-marquee'
 import { Link } from 'react-router-dom';
+import 'animate.css';
+import swal from 'sweetalert2'
 
 const HomeNew: FC = () => {
     const [navOpen, setNavOpen] = useState(false);
@@ -16,6 +18,41 @@ const HomeNew: FC = () => {
             setNavOpen(false); // Close the nav if clicked outside
         }
     };
+
+    const openContactForm = () => {
+        if (window.innerWidth <= 768) {
+            // Open the Google Form in a new tab
+            window.open('https://docs.google.com/forms/d/e/1FAIpQLSdVtkdvNCKKaduoADF9ioPDTRgag_vOmtbl-Ja_Wn_tu4qNZA/viewform', '_blank');
+        } else {
+            // Open the Google Form in a SweetAlert popup
+            swal.fire({
+                html: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVtkdvNCKKaduoADF9ioPDTRgag_vOmtbl-Ja_Wn_tu4qNZA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
+                showCloseButton: true,
+                showConfirmButton: false,
+                customClass: {
+                    popup: 'swal-with-iframe',
+                },
+
+                width: 750,
+                showClass: {
+                    popup: `
+                      animate__animated
+                      animate__fadeInUp
+                      animate__faster
+                    `
+                  },
+                  hideClass: {
+                    popup: `
+                      animate__animated
+                      animate__fadeOutDown
+                      animate__faster
+                    `
+                  }
+            });
+        }
+    }
+
+
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -67,7 +104,7 @@ const HomeNew: FC = () => {
                             <div> | </div>
                             <Link to="#team" onClick={() => scrollToSection('team')}>TEAM</Link>
                             <div> | </div>
-                            <a onClick={() => { }}>CONTACT</a>
+                            <a onClick={() => openContactForm()}>CONTACT</a>
                         </span>
                     </div>
                 </div>
@@ -232,13 +269,7 @@ const HomeNew: FC = () => {
                         <br /><br />
                         <span>Feel free to connect.</span>
                         <br />
-                        <a
-                            href="mailto:headkinogames@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <i className="fas fa-envelope social-icon small"></i>
-                        </a>
+                        <i onClick={() => openContactForm()} className="fas fa-envelope social-icon small"></i>
                     </p>
                 </div>
             </div>
