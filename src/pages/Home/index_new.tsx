@@ -3,7 +3,6 @@ import './styles-new.css'
 import Marquee from 'react-fast-marquee'
 import { Link } from 'react-router-dom';
 import 'animate.css';
-import swal from 'sweetalert2'
 
 const HomeNew: FC = () => {
     const [navOpen, setNavOpen] = useState(false);
@@ -19,13 +18,15 @@ const HomeNew: FC = () => {
         }
     };
 
-    const openContactForm = () => {
+    const openContactForm = async () => {
         if (window.innerWidth <= 768) {
             // Open the Google Form in a new tab
             window.open('https://docs.google.com/forms/d/e/1FAIpQLSdVtkdvNCKKaduoADF9ioPDTRgag_vOmtbl-Ja_Wn_tu4qNZA/viewform', '_blank');
         } else {
+            const Swal = (await import('sweetalert2')).default;
+
             // Open the Google Form in a SweetAlert popup
-            swal.fire({
+            Swal.fire({
                 html: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVtkdvNCKKaduoADF9ioPDTRgag_vOmtbl-Ja_Wn_tu4qNZA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
                 showCloseButton: true,
                 showConfirmButton: false,
@@ -40,15 +41,16 @@ const HomeNew: FC = () => {
                       animate__fadeInUp
                       animate__faster
                     `
-                  },
-                  hideClass: {
+                },
+                hideClass: {
                     popup: `
                       animate__animated
                       animate__fadeOutDown
                       animate__faster
                     `
-                  }
+                }
             });
+
         }
     }
 
