@@ -125,6 +125,11 @@ html {
   align-items: center;
 }
 
+.no-select {
+  user-select: none;
+  cursor: pointer;
+}
+
 /* game segment */
 
 .game-segment {
@@ -156,11 +161,9 @@ html {
 }
 
 .character-image {
-  width: 60vw;
-  height: auto;
-  max-width: 300px;
+  max-width: 600px;
   margin-top: 20px;
-  margin-bottom: -4.5vh;
+  margin-bottom: -6.2vh;
   z-index: 2;
   object-fit: contain;
 }
@@ -209,9 +212,9 @@ html {
 
 .preview-image {
   height: auto;
-  margin: 10px;
-  flex: 1 1 calc(33.33% - 20px);
-  max-width: calc(33.33% - 20px);
+  margin: 5px;
+  flex: 1 1 calc(33.33% - 10px);
+  max-width: calc(33.33% - 10px);
 }
 
 
@@ -484,7 +487,7 @@ h1 {
 
   .character-image {
     height: 30vh;
-    margin-bottom: -4.2vh;
+    margin-bottom: -5vh;
   }
 
   .marquee-banner {
@@ -508,14 +511,11 @@ h1 {
   }
 
   .preview-image {
-    width: 80%;
+    width: 95%;
     max-width: 400px;
     height: auto;
-    margin: 10px 0;
+    margin: 5px 0;
   }
-
-
-
 
   /* company segment */
 

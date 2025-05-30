@@ -138,28 +138,43 @@ const HomeNew: FC = () => {
                         <span>2026 Q3</span>
                     </p>
                     <Marquee className="marquee-banner" direction='right'>
-                        <span>WISHLIST NOW!!</span>
+                        <span className="no-select" onClick={() => openContactForm()}>REACH OUT ✉️ !!</span>
                     </Marquee>
                     <div className='preview'>
                         <img
-                            src="/game_scene.webp"
+                            src="/screen_01.webp"
                             alt="screenshot game"
                             className="preview-image"
                         />
                         <img
-                            src="/webbg_02.webp"
+                            src="/screen_02.webp"
                             alt="screenshot game"
                             className="preview-image"
                         />
                         <img
-                            src="/image22.webp"
+                            src="/screen_03.webp"
+                            alt="screenshot game"
+                            className="preview-image"
+                        />
+                        <img
+                            src="/screen_04.webp"
+                            alt="screenshot game"
+                            className="preview-image"
+                        />
+                        <img
+                            src="/screen_05.webp"
+                            alt="screenshot game"
+                            className="preview-image"
+                        />
+                        <img
+                            src="/screen_06.webp"
                             alt="screenshot game"
                             className="preview-image"
                         />
                     </div>
 
                     <img
-                        src="/image59_b.webp"
+                        src="/characters_group.webp"
                         alt="Character Portrait"
                         className="character-image"
                     />
@@ -247,12 +262,12 @@ const HomeNew: FC = () => {
 
                     <div className="image-container">
                         <div className="image-wrapper">
-                            <img src="/profile_01_c.webp" alt="Team Member Joy" />
+                            <img src="/portrait_j.webp" alt="Team Member Joy" />
                             <p className="name">Joy W</p>
                             <p>Cofounder - Art and Narrative</p>
                         </div>
                         <div className="image-wrapper">
-                            <img src="/portrait_philipp.webp" alt="Team Member Philipp" />
+                            <img src="/portrait_p.webp" alt="Team Member Philipp" />
                             <p className="name">Philipp B</p>
                             <p>Cofounder - Programming and Design</p>
                         </div>
