@@ -3,6 +3,7 @@ import '../Home/styles.css';
 import './styles.css';
 import Navigation from '../../components/navigation';
 import Marquee from 'react-fast-marquee';
+import { openContactForm } from '../../utils/openContactForm';
 
 const Team: React.FC = () => {
     return (
@@ -39,7 +40,7 @@ const Team: React.FC = () => {
                                 </p>
                             </div>
                             <p className='description-text'>
-                                Experienced game developer with over 9 years in programming and 4+ years in the games industry, specializing in gameplay and tool development. Proficient in Godot and PixiJS.
+                                Experienced game developer with over 9 years of programming experience and more than 4 years in the games industry, specializing in gameplay and tool development. Taught introductory game development courses in a university Master's program.
                             </p>
                         </div>
                     </div>
@@ -54,6 +55,9 @@ const Team: React.FC = () => {
 
                         <h2>Vision</h2>
                         <p>Create inspiring and beautiful games that tell meaningful, down-to-earth, diverse and relatable stories with elements of fantastical mystery that affect and captivate players.</p>
+                        <span>Reach out to us</span>
+                        <br />
+                        <i onClick={() => openContactForm()} className="fas fa-envelope social-icon small"></i>
                     </div>
                 </div>
             </div>

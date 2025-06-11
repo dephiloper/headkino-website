@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 0 0 0;
     color: #000;
 }
 
@@ -23,7 +23,6 @@
 .team-info {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
 }
 
 .member-section {
@@ -78,6 +77,7 @@
     max-width: 60%;
     font-size: 1.2em;
     text-align: justify;
+    line-height: 1.6;
 }
 
 .company-info {
@@ -100,4 +100,77 @@
     line-height: 1.6;
     padding-left: 120px;
     padding-right: 120px;
+}
+
+.company-info span {
+    margin-top: 100px;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.company-info i {
+    font-size: 3em;
+}
+
+@media (max-width: 768px) {
+    .marquee-heading {
+        margin-top: 60px;
+        font-size: 2em;
+    }
+
+    .team-page {
+        padding: 20px 0 0 0;
+    }
+
+    .content {
+        width: 100%;
+        max-width: none;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .team-info {
+        align-items: center;
+    }
+
+    .member-section,
+    .member-section.reverse {
+        gap: 10px;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .description-text {
+        max-width: 90%;
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 0px;
+        font-size: 1em;
+    }
+
+    .image-column {
+        align-items: center;
+    }
+
+    .image-column img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .company-info h2 {
+        font-size: 1.5em;
+    }
+
+    .company-info p {
+        padding: 0 10px 0 10px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 1em;
+    }
 }
