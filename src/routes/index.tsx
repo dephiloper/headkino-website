@@ -12,9 +12,10 @@ const RouteStack: FC = () => {
     <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/old" element={<HomeOld />} />
         <Route path="/team" element={<Team />} />
         <Route path="/games" element={<Games />} />
+
+        <Route path="/old" element={<HomeOld />} />
         {/* not found routes will hit here */}
         <Route path="*" element={<NotFound />} />
       </Routes>

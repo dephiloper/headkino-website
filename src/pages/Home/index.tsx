@@ -4,10 +4,8 @@ import Marquee from 'react-fast-marquee'
 import { Link } from 'react-router-dom';
 import 'animate.css';
 import FsLightbox from "fslightbox-react";
-import Navigation from '../../components/navigation';
+import Navigation, { Page } from '../../components/navigation';
 import { openContactForm } from '../../utils/openContactForm';
-
-const FsLightboxComponent = FsLightbox as unknown as React.ComponentType<any>;
 
 const Home: FC = () => {
     const [lightboxController, setLightboxController] = useState({
@@ -26,7 +24,7 @@ const Home: FC = () => {
     return (
         <div className="App">
             <div className="visible-on-mobile company-name navbar-left">HEADKINO GAMES</div>
-            <Navigation />
+            <Navigation page={Page.Home} />
             <div className="background-image"></div>
 
             <div className="segment game-segment">
@@ -54,7 +52,7 @@ const Home: FC = () => {
                         <span>2026 Q3</span>
                     </p>
 
-                    <Link to='games'>
+                    <Link to='/games'>
                         <button className="learn-more">Learn More</button>
                     </Link>
 
@@ -75,7 +73,7 @@ const Home: FC = () => {
                             alt="screenshot game"
                             className="preview-image flash-image"
                         />
-                        <FsLightboxComponent
+                        <FsLightbox
                             toggler={lightboxController.toggler}
                             sources={[
                                 "./screen_01.webp",
@@ -194,7 +192,7 @@ const Home: FC = () => {
                         <br /><br />
                         Our first project <span>Haunted Cleaner</span> was born of a combination of cozy games and personal stories in mysterious, nostalgic settings. The project reflects a shared interest in unusual, cross-genre media and aims to create engaging experiences, emotional connection and relaxation through satisfying interactions and both direct and indirect storytelling.
                         <br /><br />
-                        <Link to='team'>
+                        <Link to='/team'>
                             <button className="more-about-us">More about us</button>
                         </Link>
                         <br /><br />

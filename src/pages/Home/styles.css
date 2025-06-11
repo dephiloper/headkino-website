@@ -136,7 +136,7 @@ html {
 }
 
 .flash-image:hover {
-  filter: brightness(1.2);
+  filter: brightness(1.1);
 }
 
 .learn-more {
@@ -221,7 +221,7 @@ html {
 }
 
 .marquee-banner {
-  color: black;
+  background-color: transparent;
   font-weight: bold;
   margin-top: 20px;
   text-transform: uppercase;
@@ -233,6 +233,7 @@ html {
 
 .marquee-banner span {
   background-color: yellow;
+  color: black;
 }
 
 .preview-description {
@@ -250,6 +251,7 @@ html {
   margin: 5px;
   flex: 1 1 calc(33.33% - 10px);
   max-width: calc(33.33% - 10px);
+  border-radius: 4px;
 }
 
 
@@ -498,7 +500,7 @@ h1 {
 /* press kit segment */
 
 .press-kit-segment {
-  min-height: 990px;
+  min-height: 900px;
   background: linear-gradient(#FFE98D, #FEB661);
   padding-top: 50px;
 }
@@ -514,7 +516,7 @@ h1 {
   font-weight: 900;
   color: black;
   margin-top: 300px;
-  margin-bottom: 350px;
+  margin-bottom: 280px;
 }
 
 .press-kit-segment span {

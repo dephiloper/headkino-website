@@ -15,6 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@types/fslightbox-react": "^1.8.0",
+    "@types/react-router-hash-link": "^2.4.9",
     "animate.css": "^4.1.1",
     "axios": "^1.7.7",
     "fslightbox-react": "^1.8.0",
@@ -23,6 +24,7 @@
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
     "react-router-dom": "^6.26.2",
+    "react-router-hash-link": "^2.4.3",
     "sweetalert2": "^11.17.2"
   },
   "devDependencies": {
@@ -46,6 +48,10 @@
     "prettier": "^3.3.3",
     "typescript": "5.5.4",
     "vite": "^5.4.5"
+  },
+  "resolutions": {
+    "@types/react": "18.3.5",
+    "@types/react-dom": "18.3.0"
   },
   "license": "MIT"
 }

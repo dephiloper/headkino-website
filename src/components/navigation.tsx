@@ -1,8 +1,19 @@
 import { FC, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { openContactForm } from "../utils/openContactForm";
+import { HashLink } from 'react-router-hash-link';
 
-const Navigation: FC = () => {
+export enum Page {
+    Home = 0,
+    Team = 1,
+    Games = 2
+}
+
+type NavigationProps = {
+    page: Page
+};
+
+const Navigation: FC<NavigationProps> = ({ page }: NavigationProps) => {
     const [navOpen, setNavOpen] = useState(false);
     const [dropdownVisible, setDropdownVisible] = useState(false);
 
@@ -14,14 +25,6 @@ const Navigation: FC = () => {
         if (navContent && !navContent.contains(target)) {
             setNavOpen(false); // Close the nav if clicked outside
         }
-    };
-
-    const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-        setNavOpen(false);
     };
 
     useEffect(() => {
@@ -56,18 +59,17 @@ const Navigation: FC = () => {
                                 className='visible-on-mobile headkino-nav'
                                 src="/Headkino_logo.webp"
                                 alt="HeadKino Logo"
-
                             />
                             <span className="spacer"></span>
-                            <Link to="games" className='remove-on-mobile'>GAMES</Link>
-                            <div className='remove-on-mobile'> | </div>
-                            <Link to="#about" onClick={() => scrollToSection('about')}>ABOUT</Link>
+                            <Link to="/">HOME</Link>
                             <div> | </div>
-                            <Link to="team">TEAM</Link>
+                            <Link to="/games">GAMES</Link>
+                            <div> | </div>
+                            <Link to="/team">TEAM</Link>
                             <div> | </div>
                             <a onClick={() => openContactForm()}>CONTACT</a>
-                            <div> | </div>
-                            <Link to="#press-kit" onClick={() => scrollToSection('press-kit')}>PRESS</Link>
+                            <div className="remove-on-mobile"> | </div>
+                            <HashLink className="remove-on-mobile" smooth to="/#press-kit">PRESS</HashLink>
                         </span>
                     </div>
                 </div>

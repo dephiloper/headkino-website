@@ -1,14 +1,16 @@
 import React from 'react';
 import '../Home/styles.css';
 import './styles.css';
-import Navigation from '../../components/navigation';
+import Navigation, { Page } from '../../components/navigation';
 import Marquee from 'react-fast-marquee';
 import { openContactForm } from '../../utils/openContactForm';
+import ScrollToTop from '../../components/scroll-to-top';
 
 const Team: React.FC = () => {
     return (
         <div>
-            <Navigation />
+            <ScrollToTop />
+            <Navigation page={Page.Team} />
             <div className='team-page'>
                 <div className='content'>
                     <Marquee className="marquee-heading" direction='right' speed={20}>
