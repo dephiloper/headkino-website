@@ -561,6 +561,13 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"
   integrity sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==
 
+"@types/fslightbox-react@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@types/fslightbox-react/-/fslightbox-react-1.8.0.tgz#9a65ccd4cfb1aff6d0015375027f734e6845ac9a"
+  integrity sha512-JFOLu7p4kQ/+QXtC48lXx/JUX+3mxuF9uNcW10uxqADifJQTmFUXxvMXrRjAJiy/Yn9pTHTJVbODt1pwMuhh/g==
+  dependencies:
+    "@types/react" "*"
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -582,6 +589,13 @@
   version "18.3.5"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.3.5.tgz#45f9f87398c5dcea085b715c58ddcf1faf65f716"
   integrity sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==
+
+"@types/react@*":
+  version "19.1.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.7.tgz#9fc4ab6003a8e4f38710c83cb5f8afbdacb7d687"
+  integrity sha512-BnsPLV43ddr05N71gaGzyZ5hzkCmGwhMvYc8zmvI8Ci1bRkkDSzDDVfAXfN2tk748OwI7ediiPX6PfT9p0QGVg==
+  dependencies:
+    csstype "^3.0.2"
 
 "@types/react@^18.3.5":
   version "18.3.18"
@@ -1693,6 +1707,11 @@ fsevents@~2.3.2, fsevents@~2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
   integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
+
+fslightbox-react@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/fslightbox-react/-/fslightbox-react-1.8.0.tgz#36d8f497b955416fa0093386aea56fef11eb5548"
+  integrity sha512-4r2TwhQSKbFjgqzixv8gM6bmW0aEhc0B/LkeW1GGa4At13GmBifT/gLNONIzltIcOPlGvHhP+Q/nET7zL3hyxw==
 
 function-bind@^1.1.2:
   version "1.1.2"

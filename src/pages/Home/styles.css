@@ -1,210 +1,662 @@
-.App-header {
-  background-color: #6acac5;
-  height: 100vh; /* Ensure it fits the viewport height */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  position: relative;
-  overflow: hidden; /* Prevent scrolling */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.right-side {
-  width: 50%;
-  height: 100%; /* Ensure it fits the viewport height */
-  padding: 20px 0 20px 20px; /* Remove right padding */
+.App {
+  position: relative;
+}
+
+.company-name {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  padding: 25px 20px;
+  left: 10px;
+}
+
+.headkino-nav {
+  display: none;
+  width: 30px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 4;
+}
+
+.navbar-left {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  flex: 1;
+}
+
+.navbar-right {
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-dropdown {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  background-color: #00FFE1;
+  padding: 15px;
+  z-index: 5;
+  border-radius: 20px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-dropdown.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.nav-links {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0077FF;
+  display: contents;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0077FF;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/webbg_01.webp');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.segment {
+  width: 100%;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
+  align-items: center;
+}
+
+.no-select {
+  user-select: none;
+  cursor: pointer;
+}
+
+.flash-image {
+  cursor: pointer;
+  transition: filter 0.25s;
+}
+
+.flash-image:hover {
+  filter: brightness(1.2);
+}
+
+.learn-more {
+  background-color: #00000000;
+  color: #000;
+  padding: 10px 10px;
+  border: none;
+  /* border: 2px solid #000; */
+  /* border-width: 2px; */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-top: 20px;
+  text-decoration-line: underline;
+}
+
+.learn-more:hover {
+  /* border: 2px solid #00000000; */
+  background-color: #ffff00;
+  color: #000;
+  text-decoration-line: none;
+}
+
+
+/* game segment */
+
+.game-segment {
+  min-height: 1000px;
+  background-color: #00cbff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ghost-image {
+  width: 20%;
+  max-width: 250px;
+  animation: rotate 60s linear infinite;
+  margin: 20px;
+}
+
+.character-image {
+  max-width: 600px;
+  margin-top: 20px;
+  margin-bottom: -6.2vh;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.game-title {
+  width: 90vw;
+  max-width: 700px;
+}
+
+.game-description {
+  font-size: 24px;
+  font-family: serif;
+  margin: 20px 0;
+  max-width: 600px;
+  width: 90vw;
+  display: inline-block;
+}
+
+.game-description span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.marquee-banner {
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.marquee-banner span {
+  background-color: yellow;
+}
+
+.preview-description {
+  margin-top: 50px;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.preview-image {
+  height: auto;
+  margin: 5px;
+  flex: 1 1 calc(33.33% - 10px);
+  max-width: calc(33.33% - 10px);
+}
+
+
+/* Company Segment */
+.company-segment {
+  min-height: 1000px;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  position: relative;
   z-index: 1;
-  text-align: center; /* Center text */
-  position: absolute;
-  right: 0; /* Ensure it stays on the right side */
-  overflow: hidden; /* Prevent content overflow */
-  color: black; /* Change text color to black */
+  padding-top: 100px;
 }
 
-.right-side h3 {
-  font-size: 1.2em; /* Make h3 smaller */
-  color: black; /* Change text color to black */
+h3 {
+  font-size: 2em;
+  color: black;
   line-height: 1.1;
-  font-weight: 900; /* Make h3 font more bold */
-  padding: 20px 0 0 0;
-  margin: 0 0 20px 0;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
 }
 
-.right-side h1 {
-  font-size: 2.5em; /* Adjust font size */
-  margin: 20px 0; /* Add more space above and below */
-  font-weight: 1000; /* Make h1 font more bold */
-  color: black; /* Change text color to black */
+h1 {
+  font-size: 5em;
+  font-weight: 1000;
+  color: black;
+  padding: 0;
+  margin: 0;
 }
 
-.right-side hr {
-  width: 90%; /* Make it smaller horizontally */
-  border: 0.5px solid #4a4a4a; /* Darker grey */
-  margin: 10px 0;
-}
-
-.right-side .logo-image {
-  width: 40%; /* Adjust width to make the logo smaller */
+.logo-image {
+  width: 70vw;
+  max-width: 350px;
   margin: 20px 0;
 }
 
-.right-side p {
-  font-size: 0.7em; /* Make paragraph text a bit bigger */
+.company-segment p {
+  font-size: 1.2em;
   margin: 20px 0 0;
-  color: black; /* Change text color to black */
-  max-width: 60%; /* Add max width to center text */
-  font-family: 'Georgia', serif; /* Use a better serif font */
-  font-weight: 500; /* Increase font weight */
+  color: black;
+  width: 450px;
+  max-width: 80vw;
+  font-family: 'Georgia', serif;
+  font-weight: 500;
 }
 
-.right-side .social-icons {
+.social-icons {
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically */
-  margin-top: 70px; /* Push to the bottom */
-  margin-bottom: 30px; /* Add bottom margin */
-  column-gap: 25px; /* Add horizontal spacing between social buttons */
-  row-gap: 5px; /* Add horizontal spacing between social buttons */
-  flex-wrap: wrap; /* Allow wrapping */
+  align-items: center;
+  margin: 70px 0 30px;
+  column-gap: 40px;
+  row-gap: 20px;
+  flex-wrap: wrap;
 }
 
-.right-side .social-icons a {
-  text-decoration: none; /* Remove underlining */
-}
 
-.right-side .social-icon {
-  margin: 0;
-  width: 40px;
-  height: 40px; /* Ensure all social icons have the same height */
-  font-size: 1.2em;
-  color: black;
+.social-icons a {
+  text-decoration: none;
   display: flex;
-  align-items: center; /* Center icon content vertically */
-  justify-content: center; /* Center icon content horizontally */
-  transition:
-    transform 0.3s,
-    color 0.3s,
-    fill 0.3s; /* Add smooth animation */
-  cursor: pointer; /* Add pointer cursor */
+  align-items: center;
 }
 
-.right-side .social-icon:hover {
-  transform: scale(1.1); /* Grow in size */
-}
-
-.right-side .social-icon.itch {
-  height: 30px; /* Ensure the itch.io icon has the same height */
-  width: auto; /* Maintain aspect ratio */
+.social-icon {
+  font-size: 3em;
   color: black;
-  position: relative;
-  z-index: 1;
+  transition: transform 0.3s, color 0.3s, fill 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.right-side .social-icon.itch:hover {
-  filter: invert(41%) sepia(42%) saturate(4382%) hue-rotate(335deg) brightness(131%)
-    contrast(96%);
+.social-icon:hover {
+  transform: scale(1.1);
 }
 
-.right-side .social-icon.fa-instagram:hover {
-  color: #e4405f; /* Instagram main color */
+.social-icon.itch {
+  height: 45px;
+  width: auto;
+  color: black;
 }
 
-.right-side .social-icon.fa-threads:hover {
-  color: #000000; /* Threads main color */
+.social-icon.itch:hover {
+  filter: invert(41%) sepia(42%) saturate(4382%) hue-rotate(335deg) brightness(131%) contrast(96%);
 }
 
-.right-side .social-icon.fa-bluesky:hover {
-  color: #00acee; /* Bluesky main color */
+.social-icon.fa-instagram:hover {
+  color: #e4405f;
 }
 
-.right-side .social-icon.fa-youtube:hover {
-  color: #ff0000; /* YouTube main color */
+.social-icon.fa-threads:hover {
+  color: #000000;
 }
 
-.right-side .social-icon.fa-tiktok:hover {
+.social-icon.fa-bluesky:hover {
+  color: #00acee;
+}
+
+.social-icon.fa-youtube:hover {
+  color: #ff0000;
+}
+
+.social-icon.fa-tiktok:hover {
   color: #111111;
   filter: drop-shadow(2px 0px 0px #fd3e3e) drop-shadow(-2px -2px 0px #4de8f4);
 }
 
-.right-side .social-icon.fa-linkedin:hover {
-  color: #0077b5; /* LinkedIn main color */
+.social-icon.fa-linkedin:hover {
+  color: #0077b5;
 }
 
-.right-side .social-icon.fa-envelope:hover {
-  color: #ff8c00; /* Darker yellow color for email */
+.social-icon.fa-envelope:hover {
+  color: #ff8c00;
 }
 
-.half-page-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 50vw;
-  object-fit: cover;
-  object-position: 70% center;
-  z-index: 0;
+.social-icon.fa-reddit:hover {
+  color: #FF5700;
 }
 
-.floating-ghost {
-  position: absolute;
-  top: 40%;
-  left: -20%; /* Start further off-screen to the left */
-  width: 300px; /* Scale up the ghost */
+.social-icon.fa-discord:hover {
+  color: #7289da;
+}
+
+
+/* about us segment */
+
+.about-us-segment {
+  min-height: 1200px;
+  background-color: #5f4aff;
+  padding-top: 50px;
+}
+
+.marquee-heading {
+  font-size: 5em;
+  font-weight: 1000;
+  color: black;
+  padding: 0;
+  margin: 0;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.heading-team {
+  font-size: 2.8em;
+  margin-top: 120px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.image-wrapper {
+  width: 40vw;
+  max-width: 400px;
+  margin: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-wrapper img {
+  max-width: 100%;
   height: auto;
-  z-index: 2; /* Ensure the ghost is above all text and images */
-  opacity: 0.8; /* Make the ghost more transparent */
-  animation:
-    float 30s infinite linear,
-    blur-out 30s infinite linear; /* Increase duration for slower movement and add blur-out animation */
-  transition: filter 0.5s; /* Add smooth transition for blur effect */
 }
 
-.floating-ghost:hover {
-  filter: blur(10px);
+.image-wrapper p {
+  margin: 0;
+  text-align: center;
+  max-width: 100%;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
-@keyframes float {
-  0% {
-    transform: translateX(0vw) rotate(0deg); /* Start off-screen to the left */
-  }
-  50% {
-    transform: translateX(60vw) rotate(45deg); /* Move off-screen to the right and rotate halfway */
-  }
-  100% {
-    transform: translateX(130vw) rotate(90deg); /* Move further off-screen to the right and complete rotation */
-  }
+.image-wrapper p.name {
+  margin: 30px 0 0 0;
+  font-weight: 900;
+  font-size: 1.5em;
 }
 
-@media (min-width: 830px) {
-  .right-side {
-    font-size: calc(8px + 2vmin); /* Adjust font size to prevent overflow */
-  }
+.ghost-heading {
+  font-size: 5em;
+  color: black;
+  text-align: center;
+  margin: 60px 0 60px 0;
+}
 
-  .right-side .logo-image {
-    width: 35%; /* Adjust logo size to prevent overflow */
-  }
+.text-heading {
+  font-size: 5em;
+  font-family: serif;
+  font-weight: 1000;
+  color: black;
+  text-align: center;
+}
 
-  .right-side p {
-    font-size: 0.6em; /* Adjust paragraph text size to prevent overflow */
-  }
+.text-subheading {
+  font-size: 2.2em;
+  font-family: serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text-description {
+  font-size: 1.4em;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.text-description span {
+  font-weight: 700;
+}
+
+.small {
+  margin: 10px 0 10px 0;
+  font-size: 2em;
+}
+
+.more-about-us {
+  background-color: #00000000;
+  color: #000;
+  padding: 10px 10px;
+  border: none;
+  /* border: 2px solid #000; */
+  /* border-width: 2px; */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2em;
+  font-weight: 800;
+  margin-top: 20px;
+  text-decoration-line: underline;
+}
+
+.more-about-us:hover {
+  /* border: 2px solid #00000000; */
+  background-color: #FFE98D;
+  color: #000;
+  text-decoration-line: none;
+}
+
+/* press kit segment */
+
+.press-kit-segment {
+  min-height: 990px;
+  background: linear-gradient(#FFE98D, #FEB661);
+  padding-top: 50px;
+}
+
+.press-kit-segment h1 {
+  font-size: 4em;
+  font-weight: 1000;
+  color: black;
+}
+
+.press-kit-segment h2 {
+  font-size: 2em;
+  font-weight: 900;
+  color: black;
+  margin-top: 300px;
+  margin-bottom: 350px;
+}
+
+.press-kit-segment span {
+  font-size: 1em;
+}
+
+.press-kit-segment h3 {
+  font-size: 1.5em;
 }
 
 @media (max-width: 768px) {
-  .right-side .social-icons {
-    gap: 10px; /* Reduce gap between social icons */
+  .nav-links {
+    font-size: 0.9em;
   }
-}
 
-@media (max-width: 480px) {
-  .right-side .social-icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Create two rows with 4 icons each */
-    gap: 10px; /* Small gap between rows */
+  .headkino-nav {
+    visibility: visible;
+    display: flex;
+  }
+
+
+  .hidden-on-mobile {
+    visibility: hidden;
+  }
+
+  .remove-on-mobile {
+    display: none;
+  }
+
+  .visible-on-mobile {
+    visibility: visible;
+  }
+
+  .navbar-right {
+    font-size: 2em;
+  }
+
+  .nav-dropdown {
+    padding: 10px;
+  }
+
+
+  /* game segment */
+  .ghost-image {
+    width: 40%;
+    margin-top: 100px;
+  }
+
+
+  .game-description {
+    font-size: 18px;
+  }
+
+  .game-description span {
+    font-size: 20px;
+  }
+
+  .character-image {
+    height: 30vh;
+    margin-bottom: -5vh;
+  }
+
+  .marquee-banner {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preview-image {
+    width: 95%;
+    max-width: 400px;
+    height: auto;
+    margin: 5px 0;
+  }
+
+  /* company segment */
+
+  .company-segment p {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .social-icon {
+    font-size: 2.5em;
+  }
+
+  .social-icon.itch {
+    height: 40px;
+    width: auto;
+  }
+
+  /* about-us segment */
+
+  .marquee-heading {
+    font-size: 3em;
+  }
+
+  .heading-team {
+    font-size: 2.2em;
+    margin-top: 60px;
+  }
+
+  .image-wrapper {
+    margin: 0 5px;
+  }
+
+
+  .image-wrapper p {
+    font-size: 1em;
+  }
+
+  .image-wrapper p.name {
+    font-size: 1.2em;
+  }
+
+  .ghost-heading {
+    font-size: 3em;
+    margin: 40px 0 40px 0;
+  }
+
+  .text-heading {
+    font-size: 3em;
+  }
+
+  .text-subheading {
+    font-size: 1.5em;
+  }
+
+  .text-description {
+    font-size: 1.1em;
   }
 }

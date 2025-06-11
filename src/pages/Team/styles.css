@@ -1,0 +1,103 @@
+.team-page {
+    background: linear-gradient(to right, #54C4E8, #7034E4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: #000;
+}
+
+.marquee-heading {
+    font-size: 4em;
+    font-weight: 1000;
+    margin: 40px 0;
+}
+
+.content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.member-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.member-section.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-column img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-caption {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.image-caption .portrait-name {
+    font-weight: bold;
+    display: block;
+    font-size: 1.2em;
+}
+
+.image-caption .portrait-role {
+    display: block;
+    font-weight: normal;
+    color: #333;
+    font-size: 1.1em;
+    /* Optional: slightly dimmer text */
+}
+
+.description-text {
+    max-width: 60%;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-info h2 {
+    text-align: center;
+    font-size: 1.8em;
+    padding: 0;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.company-info p {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.6;
+    padding-left: 120px;
+    padding-right: 120px;
+}
