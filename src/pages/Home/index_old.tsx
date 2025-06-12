@@ -87,4 +87,4 @@ const HomeOld: FC = () => {
   )
 }
 
-export default HomeOld;
+export default HomeOld

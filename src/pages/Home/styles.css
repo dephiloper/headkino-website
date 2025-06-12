@@ -53,7 +53,7 @@ html {
   position: fixed;
   left: 10px;
   right: 10px;
-  background-color: #00FFE1;
+  background-color: #00ffe1;
   padding: 15px;
   z-index: 5;
   border-radius: 20px;
@@ -77,14 +77,14 @@ html {
 .nav-links {
   font-size: 1.5em;
   font-weight: bold;
-  color: #0077FF;
+  color: #0077ff;
   display: contents;
   align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #0077FF;
+  color: #0077ff;
   margin: 0 10px;
   cursor: pointer;
 }
@@ -97,8 +97,6 @@ html {
   text-decoration: underline;
   cursor: pointer;
 }
-
-
 
 .background-image {
   position: fixed;
@@ -161,7 +159,6 @@ html {
   color: #000;
   text-decoration-line: none;
 }
-
 
 /* game segment */
 
@@ -254,7 +251,6 @@ html {
   border-radius: 4px;
 }
 
-
 /* Company Segment */
 .company-segment {
   min-height: 1000px;
@@ -308,7 +304,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-
 .social-icons a {
   text-decoration: none;
   display: flex;
@@ -318,7 +313,10 @@ h1 {
 .social-icon {
   font-size: 3em;
   color: black;
-  transition: transform 0.3s, color 0.3s, fill 0.3s;
+  transition:
+    transform 0.3s,
+    color 0.3s,
+    fill 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -336,7 +334,8 @@ h1 {
 }
 
 .social-icon.itch:hover {
-  filter: invert(41%) sepia(42%) saturate(4382%) hue-rotate(335deg) brightness(131%) contrast(96%);
+  filter: invert(41%) sepia(42%) saturate(4382%) hue-rotate(335deg) brightness(131%)
+    contrast(96%);
 }
 
 .social-icon.fa-instagram:hover {
@@ -369,13 +368,12 @@ h1 {
 }
 
 .social-icon.fa-reddit:hover {
-  color: #FF5700;
+  color: #ff5700;
 }
 
 .social-icon.fa-discord:hover {
   color: #7289da;
 }
-
 
 /* about us segment */
 
@@ -492,7 +490,7 @@ h1 {
 
 .more-about-us:hover {
   /* border: 2px solid #00000000; */
-  background-color: #FFE98D;
+  background-color: #ffe98d;
   color: #000;
   text-decoration-line: none;
 }
@@ -501,7 +499,7 @@ h1 {
 
 .press-kit-segment {
   min-height: 900px;
-  background: linear-gradient(#FFE98D, #FEB661);
+  background: linear-gradient(#ffe98d, #feb661);
   padding-top: 50px;
 }
 
@@ -537,7 +535,6 @@ h1 {
     display: flex;
   }
 
-
   .hidden-on-mobile {
     visibility: hidden;
   }
@@ -558,13 +555,11 @@ h1 {
     padding: 10px;
   }
 
-
   /* game segment */
   .ghost-image {
     width: 40%;
     margin-top: 100px;
   }
-
 
   .game-description {
     font-size: 18px;
@@ -635,7 +630,6 @@ h1 {
   .image-wrapper {
     margin: 0 5px;
   }
-
 
   .image-wrapper p {
     font-size: 1em;

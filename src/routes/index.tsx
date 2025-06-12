@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import React, { FC } from 'react'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
-import NotFound from '../pages/NotFound';
-import Home from '../pages/Home';
-import HomeOld from '../pages/Home/index_old';
-import Team from '../pages/Team';
-import Games from '../pages/Games';
+import NotFound from '../pages/NotFound'
+import Home from '../pages/Home'
+import HomeOld from '../pages/Home/index_old'
+import Team from '../pages/Team'
+import Games from '../pages/Games'
 
 const RouteStack: FC = () => {
   return (
@@ -20,7 +20,7 @@ const RouteStack: FC = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
-  );
-};
+  )
+}
 
-export default RouteStack;
+export default RouteStack
