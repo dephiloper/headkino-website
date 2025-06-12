@@ -13,7 +13,7 @@ const Team: React.FC = () => {
             <Navigation page={Page.Team} />
             <div className='team-page'>
                 <div className='content'>
-                    <Marquee className="marquee-heading" direction='right' speed={20}>
+                    <Marquee className="marquee-heading" direction='left' speed={20}>
                         <span>We Are HeadKino</span>
                     </Marquee>
 

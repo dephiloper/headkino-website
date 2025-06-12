@@ -84,7 +84,7 @@ const Home: FC = () => {
                         />
                     </div>
 
-                    <Marquee className="marquee-banner" direction='right'>
+                    <Marquee className="marquee-banner" direction='left'>
                         <span className="no-select" onClick={() => openContactForm()}>REACH OUT ✉️ !</span>
                     </Marquee>
 
