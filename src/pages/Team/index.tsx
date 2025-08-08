@@ -43,16 +43,14 @@ const Team: React.FC = () => {
                 <p className="image-caption">
                   <span className="portrait-name">Philipp B</span>
                   <span className="portrait-role">
-                    Cofounder - Programming and Game Design
+                    Cofounder - Game Design
                   </span>
                 </p>
               </div>
               <p className="description-text">
-                Experienced game developer with over 9 years of programming experience and
-                more than 4 years in the games industry, specializing in gameplay and tool
-                development. Taught introductory game development courses in a university
-                Master`s program.
-              </p>
+              Lead game designer specializing in gameplay systems and technical art, with over
+              9 years of programming experience and more than 4 years in the games industry.
+              Former university lecturer in introductary game creation course.</p>
             </div>
           </div>
           <div className="company-info">
@@ -69,7 +67,7 @@ const Team: React.FC = () => {
             <h2>How do we work together?</h2>
             <p>
               Joy`s art and design background sets her up to lead the creative direction
-              of the project, while Philipp takes on the technical development. The
+              of the project, while Philipp takes on the game design and system design. The
               project strategy, management, business vision and administration work is a
               shared responsibility, with Joy focusing on marketing, promotion and studio
               concept and Philipp focusing on legal and financial management.

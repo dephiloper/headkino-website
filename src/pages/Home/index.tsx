@@ -195,7 +195,7 @@ const Home: FC = () => {
             <div className="image-wrapper">
               <img src="/portrait_p.webp" alt="Team Member Philipp" />
               <p className="name">Philipp B</p>
-              <p>Cofounder - Programming and Design</p>
+              <p>Cofounder - Game Design</p>
             </div>
           </div>
 
